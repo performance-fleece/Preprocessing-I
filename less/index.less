@@ -57,3 +57,27 @@ html, body {
     height: 100%;
 }
 
+/* Code Starts Here */
+
+@desktop: (max-width: 900px);
+@tablet: (max-width: 800px);
+@mobile: (max-width: 500px);
+
+.custom-layout(@j:center , @a:center ) {
+	display: flex;
+	justify-content: @j;
+	align-items: @a;
+}
+
+
+.container {
+	width: 100%;
+}
+
+img {
+	width: 100%;
+	
+}
+
+
+
