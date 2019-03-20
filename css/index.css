@@ -237,6 +237,7 @@ p {
   .top-content .teamup {
     margin-top: 0;
     padding-bottom: 2em;
+    text-align: center;
   }
 }
 .top-content .teamup button {
@@ -247,6 +248,11 @@ p {
   margin-top: 20px;
   padding: 10px 20px;
   color: white;
+}
+@media ( max-width: 500px ) {
+  .top-content .teamup button {
+    align-self: center;
+  }
 }
 .middle-content {
   display: flex;
