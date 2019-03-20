@@ -148,8 +148,6 @@ body {
 @mobile: ~"( max-width: 500px )";
 @fonts: Arial, sans-serif;
 
-
-
 .custom(@j:center, @a:center) {
   display: flex;
   justify-content: @j;
@@ -164,6 +162,10 @@ body {
 .container {
   max-width: 900px;
   margin: 0 2em;
+
+  @media @mobile {
+    max-width: 500px;
+  }
 }
 
 .table-border() {
@@ -191,13 +193,16 @@ p {
   line-height: 1.2;
 }
 
-
 .header {
   .custom(flex-end, center);
   padding: 1em 0;
   nav {
     width: 40%;
     .custom(space-evenly, center);
+
+    @media @mobile {
+      width: 100%;
+    }
   }
   a {
     // text-align: center;
@@ -206,15 +211,24 @@ p {
   }
 }
 
-
 .top-content {
   .custom(space-between, center);
   background-color: @background;
   flex-flow: row wrap;
   padding: 2.5em 1.5em 0 1.5em;
-  margin: 0 .7em;
+  margin: 0 0.7em;
+
+  @media @mobile {
+    flex-flow: column nowrap;
+  }
+
   .img {
     width: 49%;
+
+    @media @mobile {
+      width: 100%;
+    }
+
     img {
       width: 100%;
     }
@@ -223,8 +237,17 @@ p {
     .custom();
     flex-direction: column;
     width: 49%;
+    @media @mobile {
+      width: 100%;
+      padding: 2em 0;
+    }
+
     p {
       padding: 1em 0;
+
+      @media @mobile {
+        padding: 1em 0 0 0;
+      }
     }
   }
   .teamup {
@@ -234,6 +257,11 @@ p {
     padding: 2em 0 2.5em 0;
     margin-top: 2em;
     border-top: 1px solid gray;
+
+    @media @mobile {
+      margin-top: 0;
+      padding-bottom: 2em;
+    }
 
     button {
       align-self: flex-start;
@@ -249,42 +277,53 @@ p {
 .middle-content {
   .custom(space-between, flex-start);
   flex: 1;
-  margin: 0 .7em;
+  margin: 0 0.7em;
+
+  @media @mobile {
+    flex-direction: column;
+    .custom();
+  }
+
   h2 {
     margin: 1em 0;
   }
 
   .about {
     width: 48%;
+    @media @mobile {
+      width: 100%;
+    }
   }
 
   .skills {
     height: 100%;
     width: 49%;
-
-      p{
-        width: 100%;
-        border: 1px solid lightgray;
-        padding : .3em 1em;
-      }
+    @media @mobile {
+      width: 100%;
+    }
+    p {
+      width: 100%;
+      border: 1px solid lightgray;
+      padding: 0.3em 1em;
+    }
   }
 }
 
-
 .history {
-  margin: 2em .7em;
+  margin: 2em 0.7em;
 
   table {
     width: 100%;
-    margin-top: .5em;
+    margin-top: 0.5em;
 
     th {
       text-align: left;
       background-color: lightgray;
     }
 
-    td,th {
-      padding: .4em .6em;
+    td,
+    th {
+      padding: 0.4em 0.6em;
       .table-border();
     }
 
@@ -292,7 +331,6 @@ p {
       background-color: lightgray;
     }
   }
-
 }
 
 footer {
@@ -300,5 +338,4 @@ footer {
   color: white;
   background-color: @buttoncolor;
   padding: 1em 0 2em 0;
-
 }
