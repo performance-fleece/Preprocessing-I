@@ -170,7 +170,7 @@ p {
   align-items: center;
   background-color: lightgray;
   flex-flow: row wrap;
-  padding: 1.5em 1.5em 0 1.5em;
+  padding: 2.5em 1.5em 0 1.5em;
   margin: 0 0.7em;
 }
 .top-content .img {
@@ -196,7 +196,7 @@ p {
   justify-content: center;
   align-items: center;
   flex-flow: column wrap;
-  padding: 2em 0;
+  padding: 2em 0 2.5em 0;
   margin-top: 2em;
   border-top: 1px solid gray;
 }
