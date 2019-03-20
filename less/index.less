@@ -141,6 +141,7 @@ body {
 
 /* Code Starts Here */
 @navcolor: black;
+@background: lightgray;
 @desktop: ~"( max-width: 900px )";
 @tablet: ~"( max-width: 800px )";
 @mobile: ~"( max-width: 500px )";
@@ -153,23 +154,58 @@ body {
 
 .container {
   max-width: 900px;
+  border: 1px solid red;
+  margin: 0 30px;
 }
 
-img {
-  width: 100%;
-}
+// img {
+//   width: 100%;
+// }
 
 .header {
+  .custom(flex-end, center);
+  padding: 1em 0;
   nav {
     width: 40%;
-    margin-left: auto;
-    display: flex;
-    align-items: flex-end;
-    flex: 1;
-    justify-content: space-around;
+    .custom(space-evenly, center);
   }
   a {
+    // text-align: center;
     text-decoration: none;
     color: @navcolor;
+  }
+}
+
+h1 {
+  font-size: 2.1em;
+}
+
+.top-content {
+  .custom(flex-start, center);
+  background-color: @background;
+  flex-flow: row wrap;
+  padding: 2em 2em 0 2em;
+  .img {
+    width: 50%;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  .name {
+    .custom();
+    flex-direction: column;
+    width: 50%;
+      p {
+        padding: 1em 0;
+      }
+  }
+  .teamup {
+    width: 100%;
+    .custom();
+    flex-flow: column wrap;
+    padding: 2em 0;
+    margin: 2em 0;
+    border-top: 1px solid gray;
   }
 }
