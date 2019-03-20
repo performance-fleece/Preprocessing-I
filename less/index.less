@@ -142,6 +142,7 @@ body {
 /* Code Starts Here */
 @navcolor: black;
 @background: lightgray;
+@buttoncolor: gray;
 @desktop: ~"( max-width: 900px )";
 @tablet: ~"( max-width: 800px )";
 @mobile: ~"( max-width: 500px )";
@@ -152,6 +153,11 @@ body {
   align-items: @a;
 }
 
+.button (@r) {
+  background-color: @buttoncolor;
+  border: none;
+  border-radius: @r;
+}
 .container {
   max-width: 900px;
   border: 1px solid red;
@@ -180,6 +186,14 @@ h1 {
   font-size: 2.1em;
 }
 
+h2 {
+  font-size: 1.6em;
+}
+
+p {
+  line-height: 1.2;
+}
+
 .top-content {
   .custom(flex-start, center);
   background-color: @background;
@@ -196,16 +210,47 @@ h1 {
     .custom();
     flex-direction: column;
     width: 50%;
-      p {
-        padding: 1em 0;
-      }
+    p {
+      padding: 1em 0;
+    }
   }
   .teamup {
     width: 100%;
     .custom();
     flex-flow: column wrap;
     padding: 2em 0;
-    margin: 2em 0;
+    margin-top: 2em;
     border-top: 1px solid gray;
+
+    button {
+      align-self: flex-start;
+      .button(8px);
+      margin-top: 20px;
+
+      padding: 10px 20px;
+    }
+  }
+}
+
+.middle-content {
+  .custom(space-between, flex-start);
+  flex: 1;
+  h2 {
+    margin: 1em 0;
+  }
+
+  .about {
+    width: 48%;
+  }
+
+  .skills {
+    height: 100%;
+    width: 49%;
+
+      p{
+        width: 100%;
+        border: 1px solid lightgray;
+        padding : .3em 1em;
+      }
   }
 }

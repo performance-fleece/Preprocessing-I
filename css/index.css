@@ -159,6 +159,12 @@ body {
 h1 {
   font-size: 2.1em;
 }
+h2 {
+  font-size: 1.6em;
+}
+p {
+  line-height: 1.2;
+}
 .top-content {
   display: flex;
   justify-content: flex-start;
@@ -191,6 +197,35 @@ h1 {
   align-items: center;
   flex-flow: column wrap;
   padding: 2em 0;
-  margin: 2em 0;
+  margin-top: 2em;
   border-top: 1px solid gray;
+}
+.top-content .teamup button {
+  align-self: flex-start;
+  background-color: gray;
+  border: none;
+  border-radius: 8px;
+  margin-top: 20px;
+  padding: 10px 20px;
+}
+.middle-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex: 1;
+}
+.middle-content h2 {
+  margin: 1em 0;
+}
+.middle-content .about {
+  width: 48%;
+}
+.middle-content .skills {
+  height: 100%;
+  width: 49%;
+}
+.middle-content .skills p {
+  width: 100%;
+  border: 1px solid lightgray;
+  padding: 0.3em 1em;
 }
