@@ -160,8 +160,12 @@ body {
 }
 .container {
   max-width: 900px;
-  border: 1px solid red;
-  margin: 0 30px;
+  margin: 0 2em;
+}
+
+.table-border() {
+  border-top: 1px solid gray;
+  border-bottom: 1px solid gray;
 }
 
 // img {
@@ -183,7 +187,7 @@ body {
 }
 
 h1 {
-  font-size: 2.1em;
+  font-size: 2em;
 }
 
 h2 {
@@ -198,7 +202,8 @@ p {
   .custom(flex-start, center);
   background-color: @background;
   flex-flow: row wrap;
-  padding: 2em 2em 0 2em;
+  padding: 1.5em 1.5em 0 1.5em;
+  margin: 0 .7em;
   .img {
     width: 50%;
     img {
@@ -235,6 +240,7 @@ p {
 .middle-content {
   .custom(space-between, flex-start);
   flex: 1;
+  margin: 0 .7em;
   h2 {
     margin: 1em 0;
   }
@@ -253,4 +259,37 @@ p {
         padding : .3em 1em;
       }
   }
+}
+
+
+.history {
+  margin: 2em .7em;
+
+  table {
+    width: 100%;
+    margin-top: .5em;
+
+    th {
+      text-align: left;
+      background-color: lightgray;
+    }
+
+    td,th {
+      padding: .4em .6em;
+      .table-border();
+    }
+
+    tr:nth-child(odd) {
+      background-color: lightgray;
+    }
+  }
+
+}
+
+footer {
+  text-align: center;
+  color: white;
+  background-color: @buttoncolor;
+  padding: 1em 0 2em 0;
+
 }
