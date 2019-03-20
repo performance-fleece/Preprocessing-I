@@ -150,6 +150,11 @@ body {
 h1 {
   font-size: 1.9em;
 }
+@media ( max-width: 500px ) {
+  h1 {
+    text-align: center;
+  }
+}
 h2 {
   font-size: 1.6em;
 }
