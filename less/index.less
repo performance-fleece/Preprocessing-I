@@ -146,6 +146,9 @@ body {
 @desktop: ~"( max-width: 900px )";
 @tablet: ~"( max-width: 800px )";
 @mobile: ~"( max-width: 500px )";
+@fonts: Arial, sans-serif;
+
+
 
 .custom(@j:center, @a:center) {
   display: flex;
@@ -172,6 +175,23 @@ body {
 //   width: 100%;
 // }
 
+body {
+  font-family: @fonts;
+}
+
+h1 {
+  font-size: 1.9em;
+}
+
+h2 {
+  font-size: 1.6em;
+}
+
+p {
+  line-height: 1.2;
+}
+
+
 .header {
   .custom(flex-end, center);
   padding: 1em 0;
@@ -186,35 +206,23 @@ body {
   }
 }
 
-h1 {
-  font-size: 2em;
-}
-
-h2 {
-  font-size: 1.6em;
-}
-
-p {
-  line-height: 1.2;
-}
 
 .top-content {
-  .custom(flex-start, center);
+  .custom(space-between, center);
   background-color: @background;
   flex-flow: row wrap;
   padding: 2.5em 1.5em 0 1.5em;
   margin: 0 .7em;
   .img {
-    width: 50%;
+    width: 49%;
     img {
       width: 100%;
-      height: auto;
     }
   }
   .name {
     .custom();
     flex-direction: column;
-    width: 50%;
+    width: 49%;
     p {
       padding: 1em 0;
     }
@@ -233,6 +241,7 @@ p {
       margin-top: 20px;
 
       padding: 10px 20px;
+      color: white;
     }
   }
 }
